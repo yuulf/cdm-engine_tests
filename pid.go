@@ -102,8 +102,6 @@ func main() {
 
 	buffer := bytes.NewBuffer([]byte{})
 	graph.Render(chart.PNG, buffer)
-	path.Join(os.Getenv("HOME"), "1.png")
-
 	saveTo := path.Join(os.Getenv("HOME"), "1.png")
 	ioutil.WriteFile(saveTo, buffer.Bytes(), 0644)
 }
